@@ -1,0 +1,24 @@
+.fullpage{
+    background-image: url("../public/images/hero.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+.overlay {
+    background-color: black;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    opacity: 50%;
+}
+.navbar {
+    padding: 5px 12px;
+    height: fit-content;
+    width: fit-content;
+
+}
+.logo {
+    height: 5rem;
+}

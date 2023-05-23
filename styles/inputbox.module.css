@@ -1,0 +1,30 @@
+.container {
+    position: relative;
+    background-color: gray;
+}
+.label {
+    position: ;
+    font-size: 1rem;
+    color: #52525b;
+    animation-duration: 150ms;
+    transform: translate(-0.75rem, 0rem) scale(0.75) translateZ(10rem);
+    align-self: flex-start;
+    display: block;
+    top: 0;
+    width: 100%;
+}
+.input {
+    display: block;
+    padding: 1.5rem 1rem .25rem;
+    width: 100%;
+    font-size: 1rem;
+    color: #F0E6E3;
+    background-color: #404040;
+    overflow: ;
+    appearance: none;
+    outline: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif", sans-serif;
+}

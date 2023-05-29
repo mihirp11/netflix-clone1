@@ -17,8 +17,8 @@ export const InputBox = ({
 }: InputBoxProps) => {
   return (
     <div id="floatContainer" className={styles.container}>
-      <label htmlFor={id}>{label}</label>
-      <input onChange={onChange} type={type} value={value} id={id} />
+      {/*<label htmlFor={id}>{label}</label>*/}
+      <input onChange={onChange} type={type} value={value} id={id} placeholder={label}/>
     </div>
   );
 };

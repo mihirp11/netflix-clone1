@@ -16,9 +16,15 @@ export const InputBox = ({
   type,
 }: InputBoxProps) => {
   return (
-    <div id="floatContainer" className={styles.container}>
-      {/*<label htmlFor={id}>{label}</label>*/}
-      <input onChange={onChange} type={type} value={value} id={id} placeholder={label}/>
+    <div className={styles.container} tabIndex={1}>
+      <input
+        onChange={onChange}
+        type={type}
+        value={value}
+        id={id}
+        placeholder={" "}
+      />
+      <label htmlFor={id}>{label}</label>
     </div>
   );
 };

@@ -1,32 +1,47 @@
 .container {
     position: relative;
+    align-items: normal;
+    font-size: 16px;
 }
 .container input {
     width: calc(100% - 2rem);
-    border-color: #383434;
     border-radius: 5px;
-    font-size: 16px;
     padding: 1.4rem 1rem 0.6rem;
     background-color: #383434;
     color: white;
+    border: none;
 }
 .container input:focus {
     outline: none;
+    background-color: #454545;
 }
 
-.container label {
+.label {
     position: absolute;
-    font-size: 16px;
-    transform: translate(-15rem, 1rem) scale(1);
+    transform: translate(-1rem, 1rem) scale(1);
     color: #7a7a7a;
 }
 
 .container input:placeholder-shown + label {
-    transform: translate(-15rem, 1rem) scale(1);
+    transform: translate(-19.25rem, 1rem) scale(1);
+    transition-duration: 200ms;
 }
 .container input:focus + label{
-    transform: translate(-15.75rem, 0.25rem) scale(.75);
+    transform: translate(-20rem, 0.25rem) scale(.75);
+    transition-duration: 200ms;
 }
 .container input:not(placeholder-shown) + label {
-    transform: translate(-15.75rem, 0.25rem) scale(.75);
+    transform: translate(-20rem, 0.25rem) scale(.75);
+    transition-duration: 200ms;
+}
+.container input:placeholder-shown ~ .showButton {
+    display: none;
+}
+.showButton {
+    position: fixed;
+    text-align: right;
+    transform: translate(-4rem, 1rem) scale(.75);
+    color: #7a7a7a;
+    font-size: 20px;
+    cursor: pointer;
 }

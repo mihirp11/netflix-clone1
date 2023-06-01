@@ -5,6 +5,13 @@ import { useCallback, useState } from "react";
 import axios from "axios";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
+import Image from "next/image";
+import googleLogo from "../public/images/google.png";
+import githubLogo from "../public/images/github.png";
+import Github from "next-auth/providers/github";
+import { mockProviders } from "next-auth/client/__tests__/helpers/mocks";
+import callbackUrl = mockProviders.github.callbackUrl;
+
 const Auth = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -20,16 +27,22 @@ const Auth = () => {
         redirect: false,
         callbackUrl: "/",
       });
+
       await router.push("/");
     } catch (error) {
       console.log(error);
     }
-  }, [email, password]);
+  }, [email, password, router]);
 
   const register = useCallback(async () => {
     try {
-      await axios.post("/api/register", { email, userName, password });
-      login();
+      await axios.post("/api/register", {
+        email,
+        userName,
+        password,
+      });
+
+      await login();
     } catch (error) {
       console.log(error);
     }
@@ -73,6 +86,20 @@ const Auth = () => {
             >
               {registerMode ? "Sign Up" : "Login"}
             </button>
+            <span className={styles.signInOptions}>
+              <Image
+                onClick={() => signIn("google", { callbackUrl: "/" })}
+                className={styles.Image}
+                src={googleLogo}
+                alt={"Google"}
+              />
+              <Image
+                onClick={() => signIn("github", { callbackUrl: "/" })}
+                className={styles.Image}
+                src={githubLogo}
+                alt={"Github"}
+              />
+            </span>
             <div className={styles.signInLink}>
               <p style={{ display: "inline" }}>
                 {registerMode ? "Already have an account?" : "New to Netflix?"}

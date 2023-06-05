@@ -8,7 +8,6 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import googleLogo from "../public/images/google.png";
 import githubLogo from "../public/images/github.png";
-import Github from "next-auth/providers/github";
 import { mockProviders } from "next-auth/client/__tests__/helpers/mocks";
 import callbackUrl = mockProviders.github.callbackUrl;
 

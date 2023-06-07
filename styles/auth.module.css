@@ -13,6 +13,7 @@
     font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
 }
 
+
 .navbar {
     background: linear-gradient(
             rgba(0, 0, 0, 0.5),
@@ -26,15 +27,6 @@
 }
 .logo {
     height: 2.7rem;
-}
-
-.body{
-    width: inherit;
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
 }
 
 .signInContainer {
@@ -123,4 +115,16 @@
 .Image:hover {
     background-color: rgba(0, 0, 0, 0.75);
     opacity: 75%;
+}
+
+@media (max-width : 600px) {
+    .signInBox {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 1);
+        height: calc(100vh - 5.4rem);
+    }
+    .navbar {
+        background-color: rgba(0, 0, 0, 1);
+    }
+
 }

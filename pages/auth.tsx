@@ -9,7 +9,6 @@ import Image from "next/image";
 import googleLogo from "../public/images/google.png";
 import githubLogo from "../public/images/github.png";
 import { mockProviders } from "next-auth/client/__tests__/helpers/mocks";
-import callbackUrl = mockProviders.github.callbackUrl;
 
 const Auth = () => {
   const router = useRouter();
@@ -23,15 +22,12 @@ const Auth = () => {
       await signIn("credentials", {
         email,
         password,
-        redirect: false,
-        callbackUrl: "/",
+        callbackUrl: "/profiles",
       });
-
-      await router.push("/");
     } catch (error) {
       console.log(error);
     }
-  }, [email, password, router]);
+  }, [email, password]);
 
   const register = useCallback(async () => {
     try {
@@ -87,13 +83,13 @@ const Auth = () => {
             </button>
             <span className={styles.signInOptions}>
               <Image
-                onClick={() => signIn("google", { callbackUrl: "/" })}
+                onClick={() => signIn("google", { callbackUrl: "/profiles" })}
                 className={styles.Image}
                 src={googleLogo}
                 alt={"Google"}
               />
               <Image
-                onClick={() => signIn("github", { callbackUrl: "/" })}
+                onClick={() => signIn("github", { callbackUrl: "/profiles" })}
                 className={styles.Image}
                 src={githubLogo}
                 alt={"Github"}

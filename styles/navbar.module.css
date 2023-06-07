@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 2rem;
+    background-color: #141414;
+    height: 3rem;
+    align-items: center;
+    width: auto;
+}
+.leftItems {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    height: inherit;
+}
+.logo {
+    height: 1.7rem;
+    float: left;
+}
+.rightItems {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: auto;
+    align-items: center;
+    height: inherit;
+}
+.accountButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    cursor: pointer;
+    gap: 0.25rem;
+}
+.accountButton:hover #downArrow {
+    transform: rotate(180deg);
+
+
+}
+.downArrow {
+    color: white;
+    width: .7rem;
+    transition: transform 500ms ;
+}
+.downArrow:focus {
+    transform: rotate(-90deg) translateY(-3px);
+}

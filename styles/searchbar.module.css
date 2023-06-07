@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    width: fit-content;
+}
+.search{
+    cursor: pointer;
+    color: white;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    background-color: black;
+    outline: none;
+    border: none;
+    color: white;
+}
+.searchBar:has(>input:focus) {
+    border: solid 1.50px white;
+}
+.input {
+    border: none;
+    outline: none;
+    height: inherit;
+    background-color: transparent;
+    color: white;
+    transition: width 0.5s ease-in-out;
+    width: transform(15rem;
+}

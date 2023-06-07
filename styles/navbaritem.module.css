@@ -1,0 +1,9 @@
+.item{
+    flex-direction: column;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.item:hover {
+    text-decoration: underline;
+}

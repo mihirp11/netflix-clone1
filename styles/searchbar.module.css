@@ -28,6 +28,5 @@
     height: inherit;
     background-color: transparent;
     color: white;
-    transition: width 0.5s ease-in-out;
-    width: transform(15rem;
+    width: 15rem;
 }

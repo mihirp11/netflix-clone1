@@ -4,7 +4,7 @@ import NavbarItem from "@/components/NavbarItem";
 import { AiFillCaretDown } from "react-icons/ai";
 import { useState } from "react";
 import { useWindowSize } from "react-use";
-import { BsChevronDown, BsSearch } from "react-icons/bs";
+import { BsChevronDown, BsBell } from "react-icons/bs";
 import MobileMenu from "@/components/MobileMenu";
 import SearchBar from "@/components/SearchBar";
 
@@ -12,12 +12,13 @@ const Navbar = (userImage: string) => {
   const { width } = useWindowSize();
   const [focus, setFocus] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
-  const smallScreen = width > 900;
+  const [searching, setSearching] = useState(false);
+  const lgScreen = width > 900;
   return (
     <nav className={styles.container}>
       <div className={styles.leftItems}>
         <img className={styles.logo} src={"/images/logo.png"} />
-        {smallScreen ? (
+        {lgScreen ? (
           <>
             <NavbarItem text={"Home"} />
             <NavbarItem text={"TV shows"} />
@@ -61,6 +62,10 @@ const Navbar = (userImage: string) => {
 
       <div className={styles.rightItems}>
         <SearchBar />
+        <BsBell
+          className={styles.bellIcon}
+          style={{ color: "white", cursor: "pointer" }}
+        />
         <div
           className={styles.accountButton}
           onMouseEnter={() => setFocus(true)}

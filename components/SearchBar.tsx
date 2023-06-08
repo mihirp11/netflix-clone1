@@ -14,7 +14,6 @@ const SearchBar = () => {
         <div className={styles.searchBar}>
           <BsSearch style={{ height: "inherit", padding: "0rem 0.5rem" }} />
           <input
-            focus={searching}
             placeholder={"Titles, people, genres"}
             autoFocus={true}
             className={styles.input}

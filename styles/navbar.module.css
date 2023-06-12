@@ -1,11 +1,16 @@
 .container {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.0)
+    ); ;
+    position: fixed;
     display: flex;
     flex-direction: row;
-    margin: 1rem 2rem;
-    background-color: #141414;
-    height: 3rem;
+    padding: 0.4rem 2rem;
+    height: 2.5rem;
     align-items: center;
-    width: auto;
+    width: calc(100% - 4rem);
+    z-index: 40;
 }
 .leftItems {
     display: flex;
@@ -19,6 +24,7 @@
     float: left;
 }
 .rightItems {
+    margin-top: auto;
     display: flex;
     flex-direction: row;
     gap: 1.2rem;
@@ -26,12 +32,22 @@
     align-items: center;
     height: inherit;
 }
+.dropdownIconsContainer {
+    display: flex;
+    gap: 1rem;
+    height: inherit;
+
+}
+.notifsContainer {
+    margin: auto;
+}
+
+
 .accountButton {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: fit-content;
-    cursor: pointer;
+    height: inherit;
     gap: 0.25rem;
 }
 .accountButton:hover #downArrow {
@@ -43,7 +59,7 @@
 .downArrow {
     color: white;
     width: .7rem;
-    transition: transform 500ms ;
+    transition: transform 300ms ease-in-out;
 }
 .downArrow:focus {
     transform: rotate(-90deg) translateY(-3px);

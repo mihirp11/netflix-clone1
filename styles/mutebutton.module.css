@@ -1,0 +1,22 @@
+.container{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.75rem;
+    border: 2px solid white;
+    cursor: pointer;
+    overflow: hidden;
+    padding-left: 5px ;
+    padding-top: 3px;
+    background-color: transparent;
+
+}
+
+.icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    stroke-width: 2px;
+}
+
+.container:hover {
+    background-color: rgba(255, 245, 238, 0.4);
+}

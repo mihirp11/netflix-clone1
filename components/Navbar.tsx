@@ -20,8 +20,8 @@ const Navbar = (userImage: string) => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 65) {
-        setShowBackground(true);
-      } else setShowBackground(false);
+        setShowBackground(false);
+      } else setShowBackground(true);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,7 +34,7 @@ const Navbar = (userImage: string) => {
     <nav
       className={styles.container}
       style={{
-        background: showBackground
+        background: !showBackground
           ? "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.0)"
           : "#141414",
         transition: showBackground

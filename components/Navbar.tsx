@@ -15,7 +15,7 @@ const Navbar = (userImage: string) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [inMenu, setInMenu] = useState(false);
-  const [showBackground, setShowBackground] = useState(false);
+  const [showBackground, setShowBackground] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,12 +34,10 @@ const Navbar = (userImage: string) => {
     <nav
       className={styles.container}
       style={{
-        background: !showBackground
+        background: showBackground
           ? "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.0)"
           : "#141414",
-        transition: showBackground
-          ? "background-color 0.2s ease-in"
-          : "background-color 0.2s ease-in",
+        transition: "background-color 0.8s ease-in",
       }}
     >
       <div className={styles.leftItems}>

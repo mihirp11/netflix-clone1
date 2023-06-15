@@ -1,6 +1,5 @@
 .videoContainer {
     position: relative;
-    top:0;
     width: 100%;
 }
 
@@ -8,3 +7,42 @@
     width: inherit;
 }
 
+
+.moviesContainer {
+    position: absolute;
+    top: -5rem;
+    width: 100%;
+}
+
+.movieLabel{
+    position:absolute;
+    left: 4rem;
+    bottom: 12%;
+    width: 50%;
+}
+
+.title{
+    color: white;
+    font-size: x-large;
+}
+.description{
+    color: gainsboro;
+}
+
+.moreInfo {
+    background-color: #6a6a6a;
+    display: flex;
+    color: white;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border:none;
+    gap: 0.25rem;
+    cursor: pointer;
+    align-content: center;
+}
+.moreInfo:hover{
+    background-color: #9a9a9a;
+    text-decoration: underline;
+}

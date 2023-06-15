@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <Navbar userImage={user?.image} />
-      <Billboard />
+      <Billboard style={{ position: "relative" }} />
     </>
   );
 }

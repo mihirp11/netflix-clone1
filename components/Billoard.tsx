@@ -3,12 +3,22 @@ import useBillboard from "@/hooks/useBillboard";
 import { useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import MuteButton from "@/components/MuteButton";
-const Billboard = () => {
+const Billboard = (style: any) => {
   const { data } = useBillboard();
   const [muted, setMuted] = useState(true);
 
   return (
-    <div className={styles.container}>
+    <div style={{ ...style }} className={styles.container}>
+      <div
+        style={{
+          width: "100%",
+          height: "20%",
+          position: "absolute",
+          background: "linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.5))",
+          bottom: "15rem",
+          zIndex: "50",
+        }}
+      />
       <div className={styles.videoContainer}>
         <video
           onClick={this?.pause()}

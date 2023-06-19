@@ -4,6 +4,8 @@ import { getSession, signOut } from "next-auth/react";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import Navbar from "@/components/Navbar";
 import Billboard from "@/components/Billoard";
+import { MovieList } from "@/components/MovieList";
+import useMovieList from "@/hooks/useMovieList";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -19,10 +21,13 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 export default function Home() {
   const { data: user } = useCurrentUser();
+  const { data: movieList } = useMovieList();
+  console.log(movieList);
   return (
     <>
       <Navbar userImage={user?.image} />
       <Billboard style={{ position: "relative" }} />
+      <MovieList data={movieList} title="Movies" />
     </>
   );
 }

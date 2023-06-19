@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+
+}
+.title{
+    flex-grow: 1;
+}
+.movieRow{
+    flex-grow: 3;
+    display: flex;
+    gap: 1rem;
+}
+.movieCard{
+    height: 100%;
+}

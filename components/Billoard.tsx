@@ -39,7 +39,7 @@ const Billboard = (style: any) => {
           />
         ) : (
           <MuteButton
-            style={{ position: "absolute", right: "4rem", bottom: "20%" }}
+            style={{ position: "absolute", right: "4rem", bottom: "40%" }}
             muted={muted}
             setMuted={setMuted}
           />

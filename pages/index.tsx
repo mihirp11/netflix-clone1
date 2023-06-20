@@ -22,7 +22,6 @@ export async function getServerSideProps(context: NextPageContext) {
 export default function Home() {
   const { data: user } = useCurrentUser();
   const { data: movieList } = useMovieList();
-  console.log(movieList);
   return (
     <>
       <Navbar userImage={user?.image} />
